@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon</title>
+  </head>
+  <body>
+    <h1>Welcome to pokemon</h1>
+    <div id="datos"></div>
+    <script>
+      const url = "http://localhost:3000/getpokemons";
+      fetch(url)
+        .then((res) => res.json())
+        .then((res) => {
+          console.log(res);
+          const bloque = document.getElementById("datos");
+          bloque.innerHTML = JSON.stringify(res);
+        })
+        .catch((err) => {
+          console.error(err);
+        });
+    </script>
+  </body>
+</html>

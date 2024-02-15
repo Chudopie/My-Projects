@@ -1,0 +1,1 @@
+select * from pokeusers having ataque > 5;
