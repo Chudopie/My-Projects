@@ -1,0 +1,17 @@
+C:\Users\USER\Documents\GITHUB\My-Projects\PROJECTS\csharp\Pokedex\Pokedex\bin\Debug\Pokedex.exe.config
+C:\Users\USER\Documents\GITHUB\My-Projects\PROJECTS\csharp\Pokedex\Pokedex\bin\Debug\Pokedex.exe
+C:\Users\USER\Documents\GITHUB\My-Projects\PROJECTS\csharp\Pokedex\Pokedex\bin\Debug\Pokedex.pdb
+C:\Users\USER\Documents\GITHUB\My-Projects\PROJECTS\csharp\Pokedex\Pokedex\bin\Debug\MySql.Data.dll
+C:\Users\USER\Documents\GITHUB\My-Projects\PROJECTS\csharp\Pokedex\Pokedex\bin\Debug\System.Memory.dll
+C:\Users\USER\Documents\GITHUB\My-Projects\PROJECTS\csharp\Pokedex\Pokedex\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\USER\Documents\GITHUB\My-Projects\PROJECTS\csharp\Pokedex\Pokedex\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\USER\Documents\GITHUB\My-Projects\PROJECTS\csharp\Pokedex\Pokedex\bin\Debug\System.Buffers.dll
+C:\Users\USER\Documents\GITHUB\My-Projects\PROJECTS\csharp\Pokedex\Pokedex\bin\Debug\MySql.Data.xml
+C:\Users\USER\Documents\GITHUB\My-Projects\PROJECTS\csharp\Pokedex\Pokedex\obj\Debug\Pokedex.csproj.AssemblyReference.cache
+C:\Users\USER\Documents\GITHUB\My-Projects\PROJECTS\csharp\Pokedex\Pokedex\obj\Debug\Pokedex.Form1.resources
+C:\Users\USER\Documents\GITHUB\My-Projects\PROJECTS\csharp\Pokedex\Pokedex\obj\Debug\Pokedex.Properties.Resources.resources
+C:\Users\USER\Documents\GITHUB\My-Projects\PROJECTS\csharp\Pokedex\Pokedex\obj\Debug\Pokedex.csproj.GenerateResource.cache
+C:\Users\USER\Documents\GITHUB\My-Projects\PROJECTS\csharp\Pokedex\Pokedex\obj\Debug\Pokedex.csproj.CoreCompileInputs.cache
+C:\Users\USER\Documents\GITHUB\My-Projects\PROJECTS\csharp\Pokedex\Pokedex\obj\Debug\Pokedex.csproj.Up2Date
+C:\Users\USER\Documents\GITHUB\My-Projects\PROJECTS\csharp\Pokedex\Pokedex\obj\Debug\Pokedex.exe
+C:\Users\USER\Documents\GITHUB\My-Projects\PROJECTS\csharp\Pokedex\Pokedex\obj\Debug\Pokedex.pdb
