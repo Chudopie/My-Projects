@@ -19,3 +19,4 @@ btnRoll.addEventListener('click', function () {
   //2. Display Dice
   //3. Check for rolled 1: if true, switch to next player
 });
+//comentario otravez 1234
