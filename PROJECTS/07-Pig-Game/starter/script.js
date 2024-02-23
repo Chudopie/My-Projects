@@ -20,3 +20,4 @@ btnRoll.addEventListener('click', function () {
   //3. Check for rolled 1: if true, switch to next player
 });
 //comentario otravez 1234
+//otro comentario para verificar
