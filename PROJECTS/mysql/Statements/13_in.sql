@@ -1,0 +1,1 @@
+select * from pokeusers where pokename in ('bulbasaur','charmander')/*busca a todo de los pokeusuarios donde se contenga el nombre de bulbasaur y charmander*/
