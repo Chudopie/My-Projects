@@ -91,7 +91,7 @@ if (playing) {
   document.getElementById(`score--${activePlayer}`).textContent =scores[activePlayer]
   
   //scores[1] = scores[1] + currentScore;
-  
+  //messagetocommit exmaple
   //2. Check if player's score is >=100
   //Finish the game 
   if (scores[activePlayer] >=100 ) {
