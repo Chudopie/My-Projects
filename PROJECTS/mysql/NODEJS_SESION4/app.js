@@ -17,6 +17,7 @@ const database = mysql.createConnection({
   database: "hello_sql",
 });
 //callback
+//conexion
 database.connect((err) => {
   if (err) {
     console.error("Error conectando to MySql", err);
@@ -25,8 +26,37 @@ database.connect((err) => {
   }
 });
 
+//descripcion de pokes
+//bulbasaur todo
+app.get("/getpokemonsbulbasaur", (req, res) => {
+  const solicitud = `select * from pokeusers where pokename = "bulbasaur"`;
+
+  database.query(solicitud, (err, result) => {
+    if (err) {
+      console.error("Error excecuting the query:", err.message);
+      res.status(500).send("Algo salio mal..");
+    } else {
+      res.json(result);
+    }
+  });
+});
+//Pokes del 1 al 30
+//1 bulbasaur
 app.get("/getpokemons", (req, res) => {
-  const solicitud = "SELECT * FROM pokeusers limit 151;";
+  const solicitud = `SELECT distinct pokename from pokeusers where pokename = "bulbasaur"`;
+
+  database.query(solicitud, (err, result) => {
+    if (err) {
+      console.error("Error excecuting the query:", err.message);
+      res.status(500).send("Algo salio mal..");
+    } else {
+      res.json(result);
+    }
+  });
+});
+//2  ivysaur
+app.get("/getpokemons1", (req, res) => {
+  const solicitud = `SELECT distinct pokename from pokeusers where pokename = "Ivysaur"`;
 
   database.query(solicitud, (err, result) => {
     if (err) {

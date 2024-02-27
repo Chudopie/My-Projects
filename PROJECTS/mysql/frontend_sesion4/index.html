@@ -3,23 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Pokemon</title>
   </head>
   <body>
-    <h1>Welcome to pokemon v1</h1>
-    <div id="datos"></div>
-    <script>
-      const url = "http://localhost:3000/getpokemons";
-      fetch(url)
-        .then((res) => res.json())
-        .then((res) => {
-          console.log(res);
-          const bloque = document.getElementById("datos");
-          bloque.innerHTML = JSON.stringify(res);
-        })
-        .catch((err) => {
-          console.error(err);
-        });
-    </script>
+    <div><h1>Welcome to pokemon</h1></div>
+
+    <!-- <div id="datos"></div> -->
+
+    <button class="show-modal" id="datos">Show modal 1</button>
+    <button class="show-modal" id="datos1">Show modal 2</button>
+    <button class="show-modal">Show modal 3</button>
+    <button class="show-modal">Show modal 4</button>
+    <!-- <button class="show-modal">Show modal 5</button>
+    <button class="show-modal">Show modal 6</button> -->
+    <!-- <button class="show-modal">Show modal 7</button>
+    <button class="show-modal">Show modal 8</button>
+    <button class="show-modal">Show modal 9</button>
+    <button class="show-modal">Show modal 10</button>
+    <button class="show-modal">Show modal 11</button>
+    <button class="show-modal">Show modal 12</button>
+    <button class="show-modal">Show modal 13</button>
+    <button class="show-modal">Show modal 14</button>
+    <button class="show-modal">Show modal 15</button>
+    <button class="show-modal">Show modal 16</button>
+    <button class="show-modal">Show modal 17</button>
+    <button class="show-modal">Show modal 18</button>
+    <button class="show-modal">Show modal 19</button>
+    <button class="show-modal">Show modal 20</button>
+    <button class="show-modal">Show modal 21</button>
+    <button class="show-modal">Show modal 22</button>
+    <button class="show-modal">Show modal 23</button>
+    <button class="show-modal">Show modal 24</button>
+    <button class="show-modal">Show modal 25</button>
+    <button class="show-modal">Show modal 26</button>
+    <button class="show-modal">Show modal 27</button>
+    <button class="show-modal">Show modal 28</button>
+    <button class="show-modal">Show modal 29</button>
+    <button class="show-modal">Show modal 30</button> -->
+
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>Soy un pokemon!</h1>
+      <p id="datosbulbasaur"></p>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <script src="/frontend_sesion4/calls.js"></script>
   </body>
 </html>
