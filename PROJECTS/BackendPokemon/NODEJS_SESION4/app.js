@@ -1,5 +1,5 @@
 const mysql = require("mysql2");
-const sqlKey = require("./secrets.js");
+const sqlKey = require("./secretss.js");
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors"); //pasapporte
