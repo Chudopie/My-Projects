@@ -28,8 +28,8 @@ database.connect((err) => {
 
 //descripcion de pokes
 //bulbasaur todo
-app.get("/getpokemonsbulbasaur", (req, res) => {
-  const solicitud = `select * from pokeusers where pokename = "bulbasaur"`;
+app.get(`/getpokemons/:id`, (req, res) => {
+  const solicitud = `select * from pokeusers where pokeid =${req.params.id}`;
 
   database.query(solicitud, (err, result) => {
     if (err) {
@@ -40,6 +40,22 @@ app.get("/getpokemonsbulbasaur", (req, res) => {
     }
   });
 });
+
+//llamada a IDS
+
+app.get("/getpokemonsnames", (req, res) => {
+  const solicitud = `select pokename from pokeusers where pokeid between "1" and "151"`;
+
+  database.query(solicitud, (err, result) => {
+    if (err) {
+      console.error("Error excecuting the query:", err.message);
+      res.status(500).send("Algo salio mal..");
+    } else {
+      res.json(result);
+    }
+  });
+});
+
 //Pokes del 1 al 30
 //1 bulbasaur
 app.get("/getpokemons", (req, res) => {
@@ -56,7 +72,7 @@ app.get("/getpokemons", (req, res) => {
 });
 //2  ivysaur
 app.get("/getpokemons1", (req, res) => {
-  const solicitud = `SELECT distinct pokename from pokeusers where pokename = "Ivysaur"`;
+  const solicitud = `SELECT distinct pokename from pokeusers where pokename = " Ivysaur"`;
 
   database.query(solicitud, (err, result) => {
     if (err) {
