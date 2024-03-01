@@ -82,7 +82,7 @@ function callPokemonById(id) {
     .then((res) => {
       const debilidades = res[0].debilidad.split("/");
       const container = document.querySelector(".modal-body");
-      container.innerHTML = `<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png" alt=""/> <hr> <br> <b>Nombre</b>: ${res[0].pokename} <br> <b>Tipo : </b> ${res[0].poketype} <br>  <b>Poder 1: </b> ${res[0].pokepower1} <br>  <b>Poder 2: </b> ${res[0].pokepower2}  <br>  <b>Ataque: </b> ${res[0].ataque}  <br>  <b>Defensa: </b> ${res[0].defensa}  <br>  <b>Vida: </b> ${res[0].vida}  <br>  <b>Velocidad: </b> ${res[0].velocidad}  <br>  <b>Tipo de Debilidad: </b> ${debilidades[0]} ,${debilidades[1]},${debilidades[2]} <br>  <b>Numero de Evolucion: </b> ${res[0].evolucion}`;
+      container.innerHTML = `<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png" alt=""/> <hr> <br> <b>Nombre</b>: ${res[0].pokename} <br> <b>Tipo : </b> ${res[0].poketype} <br>  <b>Poder 1: </b> ${res[0].pokepower1} <br>  <b>Poder 2: </b> ${res[0].pokepower2}  <br>  <b>Ataque: </b> ${res[0].ataque}  <br>  <b>Defensa: </b> ${res[0].defensa}  <br>  <b>Vida: </b> ${res[0].vida}  <br>  <b>Velocidad: </b> ${res[0].velocidad}  <br>  <b>Tipo de Debilidad: </b> ${debilidades}<br>  <b>Numero de Evolucion: </b> ${res[0].evolucion}`;
     })
     //hacer badges para el tipo de pokemons hacer lo mismo con debilidades y con las debilidades aplicarle badges de bootstrap
 
