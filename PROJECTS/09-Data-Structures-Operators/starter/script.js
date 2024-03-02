@@ -12,29 +12,85 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
+
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0, // Open 24 hours
+      close: 24,
+    },
+  },
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+// a nice way to destructoring objects with a function, and inserting all we want of the object in the arguments of the function
 
-  // openingHours: {
-  //   thu: {
-  //     open: 12,
-  //     close: 22,
-  //   },
-  //   fri: {
-  //     open: 11,
-  //     close: 23,
-  //   },
-  //   sat: {
-  //     open: 0, // Open 24 hours
-  //     close: 24,
-  //   },
-  // },
+  orderDelivery: function({starterIndex =1 ,mainIndex = 0,time = '20:00',adress}) {
+console.log(`Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${adress} at ${time} `);
+  }
+
 };
+restaurant.orderDelivery({
+  time:'22:30',
+  adress: 'Via del sole,21',
+  mainIndex:2,
+  starterIndex:2,
+})
 
+
+restaurant.orderDelivery({
+  adress: 'Via del sole,21',
+  starterIndex:1, 
+})
+//Fundamentals of desctructoring objects
+//AND this is how you destructor an object like the array
+//pero creas 3 variables que se llamen igual que al del object
+
+const {name, openingHours,categories} = restaurant
+console.log(name, openingHours, categories);
+/*this will apply to api's
+what if we want the variable name to be different of the property
+names, we still have to reference the property name like we did
+before, otherwise javascript don't know what we actually want
+so let's write name again but specify the colon : and write a 
+new name
+*/
+const {name: restaurantName, openingHours: hours, categories: tags } = restaurant;
+console.log(restaurantName,hours,tags);
+
+/*default values like in arrays, let's say we want to desctroctor menu , this is a way to setting a default value, cuz if we just print menu, will be undefined*/
+//Default Values
+const {menu = [], starterMenu: starters = []}= restaurant
+console.log(menu,starters);
+
+//Mutating variables
+let a = 111;
+let b = 999;
+
+const obj ={a: 23, b:7, c: 14};
+
+//we can't do const {a,b} cuz we already declare, we cannot also do not let cuz let will create new variables that we have already, in fact we want to mutate. we cannot assign a codeblock like this on the object {a,b} = obj; we will get an error, the trick it's to grab it on a parenthesis like this:
+({a,b} = obj);
+console.log(a,b);
+//now we overwrite the 2 initial variables a and b
+
+//NESTED OBJECTS
+const {fri: {open:o, close:c}} = openingHours
+console.log(o,c);
+
+
+
+/*
 const arr = [2, 3, 4];
 const a = arr[0];
-const b = arr[1];
+// const b = arr[1];
 const c = arr[2];
 //Distroctoring
 const [x, y, z] = arr;
@@ -66,3 +122,4 @@ console.log(p, q, r);
 //This could be useful when we get data from an API cuz we need a value but if isn't there we can just place a value when it's not there
 //https://codingheroes.io/assignments/destructuring-arrays.html#1-1
 //This is the link to the arrays assignment
+ */
