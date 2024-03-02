@@ -221,7 +221,19 @@ const books = [
     },
     highlighted: true,
   },
+  
+[printBookInfo = function ({title,author,year='year unknown'}){
+
+
+  console.log(`${title}, ${author}, ${year}`);
+  
+} 
+
+]
+,
 ];
+
+
 
 const [firstBook, secondBook] = books;
 console.log(firstBook, secondBook);
@@ -241,7 +253,40 @@ console.log(rating, ratingsCount);
 //Assign the threeStarRatings a variable with a default value of 0
 //i placed in the HTML
 //i need to sleep it's 1:55  03/02/2024
-const ratingStars = [63405, 1808];
+const ratingStars = [63405, 1808];  
 
 const [fiveStarRatings, oneStarRatings, threeStarRatings = 0] = ratingStars;
 console.log(fiveStarRatings, oneStarRatings, threeStarRatings);
+
+
+//Destructuring the first book object from the books array into variables called title ,author and ISBN
+const {title:firstTitle, author:firstAuthor, ISBN:firstISBN,keywords:tags} = books[0]
+console.log(firstTitle,firstAuthor,firstISBN,tags);
+
+//The seventh book from the books array is missing the programmingLanguage property. Destructure the seventh book object (books[6]) into variables called language and programmingLanguage. Assign the programmingLanguage variable with a default value of 'unknown'.
+
+const {language,programmingLanguage = 'Unknown'} = books[6]
+console.log(language,programmingLanguage);
+
+
+//Below are two variables called bookTitle and bookAuthor. Reassign them with the values of the title and author properties of the first book object from the books array.
+
+let bookTitle = 'unknown';
+let bookAuthor = 'unknown';
+
+({title:bookTitle, author:bookAuthor} = books[0]);
+console.log(bookTitle,bookAuthor);
+//Destructure the first book object from the books array into a variable called bookRating. In the result of your destructuring, the bookRating variable should be assigned with the value of the book[0].thirdParty.goodreads.rating property.
+//To handle this i was confused cuz this 
+console.log(books[0].thirdParty.goodreads.rating)
+//If i were a better reader or more deeper into this, i should see that to change the name of rating into bookRating i had to get into the deeper nested object, cuz theres an object book, then it's an object called thirdParty then, goodreads, and then the value of rating
+
+const {thirdParty:{goodreads:{rating:bookRating}}} = books[0]
+console.log(bookRating);
+
+
+
+
+printBookInfo({ title: 'Algorithms', author: 'Robert Sedgewick', year: '2011' });
+
+printBookInfo({ title: 'Algorithms', author: 'Robert Sedgewick' });
