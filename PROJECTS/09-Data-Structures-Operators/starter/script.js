@@ -29,6 +29,7 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+
   // a nice way to destructoring objects with a function, and inserting all we want of the object in the arguments of the function
 
   orderDelivery: function ({
@@ -41,19 +42,57 @@ const restaurant = {
       `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${adress} at ${time} `
     );
   },
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3} 
+     Ingredients`
+    );
+  },
 };
 
 const arr = [7, 8, 9];
 const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
 console.log(badNewArr);
-
 const newArr = [1, 2, ...arr]; //SPREAD OPERATOR
 
 //Without the ... will be the arr array inside the new arr like this const newArr = [1, 2, ...arr];
 //with the ... will be added all the variables in the array it's like taking all the elements of the array and adding it manually
 console.log(newArr);
 console.log(...newArr); //now it will expand the newarray 12789
-//DESTRUCTURING OBJECTS
+
+const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+//it helpus to get elements out of the arrays
+console.log(newMenu);
+//COPY ARRAY
+const mainMenuCopy = [...restaurant.mainMenu];
+console.log(mainMenuCopy);
+//This syntax its easier to use
+
+//Joining 2 arrays
+const menujoin = [...restaurant.mainMenu, ...restaurant.starterMenu];
+console.log(menujoin);
+
+// ITERABLES: just a comoment iterables are the arrays, strings, maps or sets but NOT objects, except objects
+
+//in Strings
+const str = 'Eduardo';
+const letters = [...str, '', 'G.'];
+console.log(letters);
+console.log(...str);
+// console.log(`${...str} Gonzalez`)
+
+//Multiple values separated by a , are usually only expected when we pass arguments into a function or when we build a new array
+
+const ingredients = [
+  prompt("Let's make pasta! Ingredient 1? "),
+  prompt(' Ingredient 2? '),
+  prompt(' Ingredient 3? '),
+];
+restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+restaurant.orderPasta(...ingredients);
+
+/////////////////////////////////////////////////////////////////
+///DESTRUCTURING OBJECTS
 restaurant.orderDelivery({
   time: '22:30',
   adress: 'Via del sole,21',
