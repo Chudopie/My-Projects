@@ -82,15 +82,26 @@ console.log(...str);
 // console.log(`${...str} Gonzalez`)
 
 //Multiple values separated by a , are usually only expected when we pass arguments into a function or when we build a new array
+//Real world example
+// const ingredients = [
+//   prompt("Let's make pasta! Ingredient 1? "),
+//   prompt(' Ingredient 2? '),
+//   prompt(' Ingredient 3? '),
+// ];
+// restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+// restaurant.orderPasta(...ingredients);
 
-const ingredients = [
-  prompt("Let's make pasta! Ingredient 1? "),
-  prompt(' Ingredient 2? '),
-  prompt(' Ingredient 3? '),
-];
-restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
-restaurant.orderPasta(...ingredients);
+//OBJECTS 
+const newRestaurant ={foundedIn:1998,...restaurant, founder: 'Guiseppe'}
+console.log(newRestaurant);
+//copying restaurant
 
+const restaurantCopy = {...restaurant}
+
+restaurantCopy.name='Ristorante roma'
+
+console.log(restaurant);
+console.log(restaurantCopy);
 /////////////////////////////////////////////////////////////////
 ///DESTRUCTURING OBJECTS
 restaurant.orderDelivery({
