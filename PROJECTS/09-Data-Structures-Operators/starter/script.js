@@ -50,35 +50,35 @@ const restaurant = {
   },
 };
 
-const arr = [7, 8, 9];
-const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
-console.log(badNewArr);
-const newArr = [1, 2, ...arr]; //SPREAD OPERATOR
+//const arr = [7, 8, 9];
+//const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+//console.log(badNewArr);
+//const newArr = [1, 2, ...arr]; //SPREAD OPERATOR
 
 //Without the ... will be the arr array inside the new arr like this const newArr = [1, 2, ...arr];
 //with the ... will be added all the variables in the array it's like taking all the elements of the array and adding it manually
-console.log(newArr);
-console.log(...newArr); //now it will expand the newarray 12789
+//console.log(newArr);
+//console.log(...newArr); //now it will expand the newarray 12789
 
-const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+//const newMenu = [...restaurant.mainMenu, 'Gnocci'];
 //it helpus to get elements out of the arrays
-console.log(newMenu);
+// console.log(newMenu);
 //COPY ARRAY
-const mainMenuCopy = [...restaurant.mainMenu];
-console.log(mainMenuCopy);
+// const mainMenuCopy = [...restaurant.mainMenu];
+// console.log(mainMenuCopy);
 //This syntax its easier to use
 
 //Joining 2 arrays
-const menujoin = [...restaurant.mainMenu, ...restaurant.starterMenu];
-console.log(menujoin);
+// const menujoin = [...restaurant.mainMenu, ...restaurant.starterMenu];
+// console.log(menujoin);
 
 // ITERABLES: just a comoment iterables are the arrays, strings, maps or sets but NOT objects, except objects
 
 //in Strings
-const str = 'Eduardo';
-const letters = [...str, '', 'G.'];
-console.log(letters);
-console.log(...str);
+// const str = 'Eduardo';
+// const letters = [...str, '', 'G.'];
+// console.log(letters);
+// console.log(...str);
 // console.log(`${...str} Gonzalez`)
 
 //Multiple values separated by a , are usually only expected when we pass arguments into a function or when we build a new array
@@ -91,36 +91,69 @@ console.log(...str);
 // restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
 // restaurant.orderPasta(...ingredients);
 
+
+// 1)DESTRUCTURING
+
+//SPREAD, because on right side of =
+const  arr1 = [1,2,...[3,4] ];
+// REST, beacuse on left side of =
+const [a1,b1, ...others] = [1,2,...[3,4] ];
+console.log(a1,b1, others);
+
+const [pizza, risotto, ...otherFood] = [...restaurant.mainMenu, restaurant.starterMenu]
+
+
+console.log(pizza, risotto, ...otherFood);
+
+//OBJECTS
+const {sat, ...weekdays} = restaurant.openingHours
+console.log(sat,weekdays);
+
+//2)Functions
+const add = function (...numbers) {
+  console.log(numbers);
+}
+add(2,3)
+add(2,3,7,2)
+add(8,5,7,9,6,3)
+
+
+
+
+
+
+
+
 //OBJECTS 
-const newRestaurant ={foundedIn:1998,...restaurant, founder: 'Guiseppe'}
-console.log(newRestaurant);
+//const newRestaurant ={foundedIn:1998,...restaurant, founder: 'Guiseppe'}
+//console.log(newRestaurant);
 //copying restaurant
 
-const restaurantCopy = {...restaurant}
+//const restaurantCopy = {...restaurant}
 
-restaurantCopy.name='Ristorante roma'
+//restaurantCopy.name='Ristorante roma'
 
-console.log(restaurant);
-console.log(restaurantCopy);
+//console.log(restaurant);
+//console.log(restaurantCopy);
 /////////////////////////////////////////////////////////////////
 ///DESTRUCTURING OBJECTS
-restaurant.orderDelivery({
-  time: '22:30',
-  adress: 'Via del sole,21',
-  mainIndex: 2,
-  starterIndex: 2,
-});
+// restaurant.orderDelivery({
+//   time: '22:30',
+//   adress: 'Via del sole,21',
+//   mainIndex: 2,
+//   starterIndex: 2,
+// });
 
-restaurant.orderDelivery({
-  adress: 'Via del sole,21',
-  starterIndex: 1,
-});
+// restaurant.orderDelivery({
+//   adress: 'Via del sole,21',
+//   starterIndex: 1,
+// });
 //Fundamentals of desctructoring objects
 //AND this is how you destructor an object like the array
 //pero creas 3 variables que se llamen igual que al del object
 
-const { name, openingHours, categories } = restaurant;
-console.log(name, openingHours, categories);
+// const { name, openingHours, categories } = restaurant;
+// console.log(name, openingHours, categories);
 /*this will apply to api's
 what if we want the variable name to be different of the property
 names, we still have to reference the property name like we did
@@ -128,34 +161,34 @@ before, otherwise javascript don't know what we actually want
 so let's write name again but specify the colon : and write a 
 new name
 */
-const {
-  name: restaurantName,
-  openingHours: hours,
-  categories: tags,
-} = restaurant;
-console.log(restaurantName, hours, tags);
+// const {
+//   name: restaurantName,
+//   openingHours: hours,
+//   categories: tags,
+// } = restaurant;
+// console.log(restaurantName, hours, tags);
 
 /*default values like in arrays, let's say we want to desctroctor menu , this is a way to setting a default value, cuz if we just print menu, will be undefined*/
 //Default Values
-const { menu = [], starterMenu: starters = [] } = restaurant;
-console.log(menu, starters);
+// const { menu = [], starterMenu: starters = [] } = restaurant;
+// console.log(menu, starters);
 
-//Mutating variables
-let a = 111;
-let b = 999;
+// //Mutating variables
+// let a = 111;
+// let b = 999;
 
-const obj = { a: 23, b: 7, c: 14 };
+// const obj = { a: 23, b: 7, c: 14 };
 
 //we can't do const {a,b} cuz we already declare, we cannot also do not let cuz let will create new variables that we have already, in fact we want to mutate. we cannot assign a codeblock like this on the object {a,b} = obj; we will get an error, the trick it's to grab it on a parenthesis like this:
-({ a, b } = obj);
-console.log(a, b);
+// ({ a, b } = obj);
+// console.log(a, b);
 //now we overwrite the 2 initial variables a and b
 
 //NESTED OBJECTS
-const {
-  fri: { open: o, close: c },
-} = openingHours;
-console.log(o, c);
+// const {
+//   fri: { open: o, close: c },
+// } = openingHours;
+// console.log(o, c);
 
 /*
 const arr = [2, 3, 4];
