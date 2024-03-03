@@ -12,7 +12,6 @@ const restaurant = {
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
 
-
   openingHours: {
     thu: {
       open: 12,
@@ -30,30 +29,47 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
-// a nice way to destructoring objects with a function, and inserting all we want of the object in the arguments of the function
+  // a nice way to destructoring objects with a function, and inserting all we want of the object in the arguments of the function
 
-  orderDelivery: function({starterIndex =1 ,mainIndex = 0,time = '20:00',adress}) {
-console.log(`Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${adress} at ${time} `);
-  }
-
+  orderDelivery: function ({
+    starterIndex = 1,
+    mainIndex = 0,
+    time = '20:00',
+    adress,
+  }) {
+    console.log(
+      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${adress} at ${time} `
+    );
+  },
 };
-restaurant.orderDelivery({
-  time:'22:30',
-  adress: 'Via del sole,21',
-  mainIndex:2,
-  starterIndex:2,
-})
 
+const arr = [7, 8, 9];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr);
+
+const newArr = [1, 2, ...arr]; //SPREAD OPERATOR
+
+//Without the ... will be the arr array inside the new arr like this const newArr = [1, 2, ...arr];
+//with the ... will be added all the variables in the array it's like taking all the elements of the array and adding it manually
+console.log(newArr);
+console.log(...newArr); //now it will expand the newarray 12789
+//DESTRUCTURING OBJECTS
+restaurant.orderDelivery({
+  time: '22:30',
+  adress: 'Via del sole,21',
+  mainIndex: 2,
+  starterIndex: 2,
+});
 
 restaurant.orderDelivery({
   adress: 'Via del sole,21',
-  starterIndex:1, 
-})
+  starterIndex: 1,
+});
 //Fundamentals of desctructoring objects
 //AND this is how you destructor an object like the array
 //pero creas 3 variables que se llamen igual que al del object
 
-const {name, openingHours,categories} = restaurant
+const { name, openingHours, categories } = restaurant;
 console.log(name, openingHours, categories);
 /*this will apply to api's
 what if we want the variable name to be different of the property
@@ -62,30 +78,34 @@ before, otherwise javascript don't know what we actually want
 so let's write name again but specify the colon : and write a 
 new name
 */
-const {name: restaurantName, openingHours: hours, categories: tags } = restaurant;
-console.log(restaurantName,hours,tags);
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+console.log(restaurantName, hours, tags);
 
 /*default values like in arrays, let's say we want to desctroctor menu , this is a way to setting a default value, cuz if we just print menu, will be undefined*/
 //Default Values
-const {menu = [], starterMenu: starters = []}= restaurant
-console.log(menu,starters);
+const { menu = [], starterMenu: starters = [] } = restaurant;
+console.log(menu, starters);
 
 //Mutating variables
 let a = 111;
 let b = 999;
 
-const obj ={a: 23, b:7, c: 14};
+const obj = { a: 23, b: 7, c: 14 };
 
 //we can't do const {a,b} cuz we already declare, we cannot also do not let cuz let will create new variables that we have already, in fact we want to mutate. we cannot assign a codeblock like this on the object {a,b} = obj; we will get an error, the trick it's to grab it on a parenthesis like this:
-({a,b} = obj);
-console.log(a,b);
+({ a, b } = obj);
+console.log(a, b);
 //now we overwrite the 2 initial variables a and b
 
 //NESTED OBJECTS
-const {fri: {open:o, close:c}} = openingHours
-console.log(o,c);
-
-
+const {
+  fri: { open: o, close: c },
+} = openingHours;
+console.log(o, c);
 
 /*
 const arr = [2, 3, 4];
