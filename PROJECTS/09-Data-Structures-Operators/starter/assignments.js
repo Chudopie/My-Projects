@@ -319,3 +319,24 @@ const printBookAuthorsCount = function (title, ...authors) {
   console.log(`The book "${title}" has ${authors.length} authors`);
 };
 printBookAuthorsCount('Algorithms', 'Robert Sedgewick', 'Kevin Wayne');
+
+//Short circuiting
+
+// Write a function called hasExamplesInJava that takes a book object from the books array as an argument. This function should return true if the book uses Java, or a string 'no data available' if it uses other language or no programming language at all.
+
+const hasExamplesInJava = function (book) {
+  console.log(book.programmingLanguage === 'Java' || 'No data available');
+};
+
+hasExamplesInJava(books[1]);
+
+// j = [1, 5, 8, 9, [4], [{ asd: (f = 45) }]];
+// console.log(j.length);
+
+for (let i = 0; i < books.length; i++) {
+  const titles = books[i].onlineContent;
+
+  titles && console.log(`"${books[i].title} provides online content "`);
+
+  // console.log(`${books[i].title}  ${title} provides online content`);
+}

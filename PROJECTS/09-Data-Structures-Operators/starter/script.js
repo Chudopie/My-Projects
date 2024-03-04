@@ -26,33 +26,61 @@ const restaurant = {
       close: 24,
     },
   },
-  order: function (starterIndex, mainIndex) {
-    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-  },
+  // order: function (starterIndex, mainIndex) {
+  //   return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  // },
 
   // a nice way to destructoring objects with a function, and inserting all we want of the object in the arguments of the function
 
-  orderDelivery: function ({
-    starterIndex = 1,
-    mainIndex = 0,
-    time = '20:00',
-    adress,
-  }) {
-    console.log(
-      `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${adress} at ${time} `
-    );
-  },
-  orderPasta: function (ing1, ing2, ing3) {
-    console.log(
-      `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3} 
-     Ingredients`
-    );
-  },
+  // orderDelivery: function ({
+  //   starterIndex = 1,
+  //   mainIndex = 0,
+  //   time = '20:00',
+  //   adress,
+  // }) {
+  //   console.log(
+  //     `Order received! ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${adress} at ${time} `
+  //   );
+  // },
+  // orderPasta: function (ing1, ing2, ing3) {
+  //   console.log(
+  //     `Here is your delicious pasta with ${ing1}, ${ing2} and ${ing3}
+  //    Ingredients`
+  //   );
+  // },
   orderPizza: function (mainIngredient, ...otherIngredients) {
     console.log(mainIngredient);
     console.log(otherIngredients);
   },
 };
+
+//SHORT CIRCUITING (&& and ||)
+//OR OPERATOR
+//Use any data type, return any data type, short-circuiting
+console.log(3 || 'Eduardo');
+console.log('' || 'Eduardo'); //''es false
+console.log(true || 0);
+console.log(undefined || null); //null
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+restaurant.numGuests = 23;
+const guest1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guest1);
+
+const guest2 = restaurant.numGuests || 10;
+console.log(guest2);
+
+console.log('---------- AND ----------');
+
+console.log(0 && 'Eduardo');
+console.log(7 && 'Eduardo');
+
+console.log('Hello' && 23 && null && 'Eduardo');
+
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushrooms', 'spinach');
+}
+restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
 
 //const arr = [7, 8, 9];
 //const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
@@ -98,41 +126,41 @@ const restaurant = {
 // 1)DESTRUCTURING
 
 //SPREAD, because on right side of =
-const arr1 = [1, 2, ...[3, 4]];
+//const arr1 = [1, 2, ...[3, 4]];
 // REST, beacuse on left side of =
-const [a1, b1, ...others] = [1, 2, ...[3, 4]];
-console.log(a1, b1, others);
+// const [a1, b1, ...others] = [1, 2, ...[3, 4]];
+// console.log(a1, b1, others);
 
-const [pizza, risotto, ...otherFood] = [
-  ...restaurant.mainMenu,
-  restaurant.starterMenu,
-];
+// const [pizza, risotto, ...otherFood] = [
+//   ...restaurant.mainMenu,
+//   restaurant.starterMenu,
+// ];
 
-console.log(pizza, risotto, ...otherFood);
+//console.log(pizza, risotto, ...otherFood);
 
 //OBJECTS
-const { sat, ...weekdays } = restaurant.openingHours;
-console.log(sat, weekdays);
+// const { sat, ...weekdays } = restaurant.openingHours;
+// console.log(sat, weekdays);
 
 //2)Functions
-const add = function (...numbers) {
-  //REST ARGUMENTS
+//const add = function (...numbers) {
+//REST ARGUMENTS
 
-  let sum = 0;
-  for (let i = 0; i < numbers.length; i++) {
-    sum += numbers[i];
-    console.log(sum);
-  }
-};
-add(2, 3);
-add(2, 3, 7, 2);
-add(8, 5, 7, 9, 6, 3);
+//   let sum = 0;
+//   for (let i = 0; i < numbers.length; i++) {
+//     sum += numbers[i];
+//     console.log(sum);
+//   }
+// };
+// add(2, 3);
+// add(2, 3, 7, 2);
+// add(8, 5, 7, 9, 6, 3);
 
-const x = [23, 5, 7];
-add(...x);
-restaurant.orderPizza('Mushrooms', 'onion', 'olives', 'spinach');
+// const x = [23, 5, 7];
+// add(...x);
+// restaurant.orderPizza('Mushrooms', 'onion', 'olives', 'spinach');
 
-restaurant.orderPizza('mushrooms');
+// restaurant.orderPizza('mushrooms');
 
 //OBJECTS
 //const newRestaurant ={foundedIn:1998,...restaurant, founder: 'Guiseppe'}
