@@ -48,6 +48,10 @@ const restaurant = {
      Ingredients`
     );
   },
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient);
+    console.log(otherIngredients);
+  },
 };
 
 //const arr = [7, 8, 9];
@@ -91,40 +95,46 @@ const restaurant = {
 // restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
 // restaurant.orderPasta(...ingredients);
 
-
 // 1)DESTRUCTURING
 
 //SPREAD, because on right side of =
-const  arr1 = [1,2,...[3,4] ];
+const arr1 = [1, 2, ...[3, 4]];
 // REST, beacuse on left side of =
-const [a1,b1, ...others] = [1,2,...[3,4] ];
-console.log(a1,b1, others);
+const [a1, b1, ...others] = [1, 2, ...[3, 4]];
+console.log(a1, b1, others);
 
-const [pizza, risotto, ...otherFood] = [...restaurant.mainMenu, restaurant.starterMenu]
-
+const [pizza, risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  restaurant.starterMenu,
+];
 
 console.log(pizza, risotto, ...otherFood);
 
 //OBJECTS
-const {sat, ...weekdays} = restaurant.openingHours
-console.log(sat,weekdays);
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(sat, weekdays);
 
 //2)Functions
 const add = function (...numbers) {
-  console.log(numbers);
-}
-add(2,3)
-add(2,3,7,2)
-add(8,5,7,9,6,3)
+  //REST ARGUMENTS
 
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+    console.log(sum);
+  }
+};
+add(2, 3);
+add(2, 3, 7, 2);
+add(8, 5, 7, 9, 6, 3);
 
+const x = [23, 5, 7];
+add(...x);
+restaurant.orderPizza('Mushrooms', 'onion', 'olives', 'spinach');
 
+restaurant.orderPizza('mushrooms');
 
-
-
-
-
-//OBJECTS 
+//OBJECTS
 //const newRestaurant ={foundedIn:1998,...restaurant, founder: 'Guiseppe'}
 //console.log(newRestaurant);
 //copying restaurant
