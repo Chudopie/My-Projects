@@ -89,6 +89,8 @@ restaurant.numGuests = 0;
 const guestCorrect = restaurant.numGuests ?? 10;
 console.log('nullishcoalescing operator', guestCorrect);
 
+//LOCAL ASSIGNMENT OPERATORS
+
 //const arr = [7, 8, 9];
 //const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
 //console.log(badNewArr);
