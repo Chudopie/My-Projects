@@ -63,7 +63,6 @@ console.log(true || 0);
 console.log(undefined || null); //null
 console.log(undefined || 0 || '' || 'Hello' || 23 || null);
 
-restaurant.numGuests = 23;
 const guest1 = restaurant.numGuests ? restaurant.numGuests : 10;
 console.log(guest1);
 
@@ -81,6 +80,14 @@ if (restaurant.orderPizza) {
   restaurant.orderPizza('mushrooms', 'spinach');
 }
 restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
+
+restaurant.numGuests = 0;
+// const guests = restaurant.numGuests || 10;
+// en un OR|| si tneemos 0 o 10 dara de resultaod el diez 0 es falso y se va al segundo, trabaja parecido al  OR el  NULLISH  ?? son dos signos de interrogacion y trabajan de la sig manera: Si el primer valor no existe se va al siguiente y lo imprime, pero si existe aparece aunque sea 0, porque trabaja con valores falsos y los valores falsos son los siguientes:
+
+//Nullish :null and undefined (NOT 0 or '')
+const guestCorrect = restaurant.numGuests ?? 10;
+console.log('nullishcoalescing operator', guestCorrect);
 
 //const arr = [7, 8, 9];
 //const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
