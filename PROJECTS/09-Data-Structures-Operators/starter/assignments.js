@@ -353,15 +353,23 @@ for (let i = 0; i < books.length; i++) {
 //Logical Assignments Operators
 //Some of the book objects from the books array are missing the edition property. Loop over the books array, and assign this property with a number 1 (if it doesn't already exist). Use logical assignment operators.
 for (let i = 0; i < books.length; i++) {
-  
- 
-  console.log( books[i].edition ||= 1);
+  console.log((books[i].edition ||= 1));
 }
 
 //Some of the book objects from the books array have the highlighted property, which by default is set to true. Iterate over the books array, and if the thirdParty.goodreads.rating property is less than 4.2, reassign it with false. Use the &&= operator (tip: you may also need the ! operator)
-
+//8.1﻿ Use the for-of loop to loop over the books array and sum the pages of all books. Use the pageSum variable below, and the pages property of the book objects.
 for (let i = 0; i < books.length; i++) {
-
-    books[i].highlighted &&= !(books[i].thirdParty.goodreads.rating<42)
+  books[i].highlighted &&= !(books[i].thirdParty.goodreads.rating < 42);
 }
+let pagesum = 0;
 
+for (let book of books) {
+  pagesum += book.pages;
+}
+//8.2﻿ Below is the allAuthors variable which stores an empty array. Use the for-of loop to fill allAuthors with the authors of each book from the books array. Remember that each book object has the author property, which can be a string (if there is only a single author) or an array (if there are multiple authors). You may need to use the typeof operator. You can also use multiple loops if needed. The allAuthors array should have just one level (no nested arrays).
+const allAuthors = [];
+//8.3
+
+for (const [index, author] of allAuthors.entries()) {
+  console.log(`${index + 1}. ${author}`);
+}
