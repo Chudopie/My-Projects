@@ -10,3 +10,4 @@ console.error(new Error("Ocurrio un error!")); //mas informacion sobre el error
 // console.error()
 // consol.assert()
 // console.table()
+//push
