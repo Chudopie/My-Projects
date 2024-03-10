@@ -1,0 +1,7 @@
+modulo events
+=definir
+=emitir
+=escuchar
+
+// const EventEmitter = require("events");
+// console.log(EventEmitter);
