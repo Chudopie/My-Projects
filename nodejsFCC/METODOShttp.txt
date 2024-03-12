@@ -1,0 +1,6 @@
+metodosHTTP
+
+GET Obtener recursos del servidor, verbo para solicitar un recurso especifico, por ejemplo un archivo HTML, CSS o una imagen
+POST  Verbo para CREAR un recurso especifico. Por ejemplo agregar un usuario nuevo a una base de datos
+PUT verbo para MODIFICAR un recurso esspecifico por ejemplo, hacer un cambio en la base de datos
+DELETE verbo para eliminar un recurso especifico. Por ejemplo, eliminar un usuario de una base de datos.
