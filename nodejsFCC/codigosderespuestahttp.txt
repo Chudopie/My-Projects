@@ -1,0 +1,7 @@
+100 al 500
+respuestas del http en developer mozilla
+200 ok
+400 bad request
+404 not found
+500 internal server errors
+estos son los mas comunes
