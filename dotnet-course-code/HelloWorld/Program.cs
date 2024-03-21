@@ -8,7 +8,9 @@
 // Console.WriteLine("Despues de este va en otra linea");
 // Console.WriteLine("Ahora si va en otra linea");
 // Console.WriteLine(args[0]);
-// using System;
+
+
+//C:\Users\USER\documents\github\my-projects\dotnet-course-code>
 
 namespace HelloWorld
 {
@@ -16,6 +18,27 @@ namespace HelloWorld
     {
         static void Main(string[]args)
         {
+
+            int myInt = 5;
+            int mySecondInt = 10;
+            if(myInt > mySecondInt)
+            {
+                 myInt += 10;
+            }
+            Console.WriteLine(myInt);
+
+            string myCow = "cow";
+            string myCapitalizedCow = "Cow";
+
+            if (myCow == myCapitalizedCow.ToLower())
+            {
+                Console.WriteLine("Equal");
+
+            } else 
+            {
+                Console.WriteLine("not Equal");
+            }
+
             // int myInt = 5;
         
             // int mySecondInt = 10;
@@ -33,18 +56,18 @@ namespace HelloWorld
             // Console.WriteLine(myInt <= mySecondInt);
             // Console.WriteLine(myInt < mySecondInt);
 
-            Console.WriteLine(5*2 <= 10 && 5> 10/2);
+            // Console.WriteLine(5*2 <= 10 && 5> 10/2);
 
-            Console.WriteLine(5*2 <= 10 && 5> 10/2 || 5>2);
+            // Console.WriteLine(5*2 <= 10 && 5> 10/2 || 5>2);
 
 
-            Console.WriteLine("Hello World");
+//             Console.WriteLine("Hello World");
 
-var names = new[] { "Ana", "Felipe", "Emillia" };
-foreach(var name in names)
-{
-    Console.WriteLine($"Hello {name}");
-}
+// var names = new[] { "Ana", "Felipe", "Emillia" };
+// foreach(var name in names)
+// {
+//     Console.WriteLine($"Hello {name}");
+// }
         //     Console.WriteLine(myInt);
 
         //     myInt++;
@@ -80,6 +103,9 @@ foreach(var name in names)
             // Console.WriteLine(myStringArr[1]);
             // Console.WriteLine(myStringArr[2]);
             // Console.WriteLine(myStringArr[3]);
+
+            // Solid Principles
+            //S Single responsability
         }
     }
 }
