@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\USER\\source\\repos\\Solid\\",
+  "WorkspaceRootPath": "C:\\Users\\USER\\Documents\\GITHUB\\My-Projects\\dotnet-course-code\\Solid\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{03E2EF76-0DAF-497B-B3C2-51DADBF981BC}|Solid\\Solid.csproj|c:\\users\\user\\source\\repos\\solid\\solid\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03E2EF76-0DAF-497B-B3C2-51DADBF981BC}|Solid\\Solid.csproj|c:\\users\\user\\documents\\github\\my-projects\\dotnet-course-code\\solid\\solid\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03E2EF76-0DAF-497B-B3C2-51DADBF981BC}|Solid\\Solid.csproj|solutionrelative:solid\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,21 +14,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\Solid\\Solid\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Documents\\GITHUB\\My-Projects\\dotnet-course-code\\Solid\\Solid\\Program.cs",
               "RelativeDocumentMoniker": "Solid\\Program.cs",
-              "ToolTip": "C:\\Users\\USER\\source\\repos\\Solid\\Solid\\Program.cs",
+              "ToolTip": "C:\\Users\\USER\\Documents\\GITHUB\\My-Projects\\dotnet-course-code\\Solid\\Solid\\Program.cs",
               "RelativeToolTip": "Solid\\Program.cs",
-              "ViewState": "AQIAAIsAAAAAAAAAAAAqwJgAAABPAAAA",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAAwJgAAABPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-21T15:48:42.44Z",
               "EditorCaption": ""

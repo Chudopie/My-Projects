@@ -299,13 +299,382 @@
 //}
 
 //16/* https://www.youtube.com/watch?v=WE_lH5m1xw8&list=PLDfQIFbmwhrcfhffDWI6b4Ghsw3FbjIDV&index=16*/
-namespace EjercicioFor
+//namespace Array
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            string[] nombres; //declarando el arreglo
+//            int cantidadnombres;
+//            do
+//            {
+//                Console.WriteLine("Cuantos nombres vas a introducir al programa?");
+//                cantidadnombres = int.Parse(Console.ReadLine());
+
+//            } while (cantidadnombres <= 0 );
+//            nombres = new string[cantidadnombres];
+//            Console.WriteLine(cantidadnombres);
+//            for (int i = 0; i < cantidadnombres; i++)
+//            {
+
+//                Console.WriteLine("Introduice un nombre");
+//                nombres[i] =Console.ReadLine();
+//            }
+//            Console.WriteLine("Se mostrara el arreglo");
+
+//            for (int i = 0; i < cantidadnombres; i++)
+//            {
+//                Console.WriteLine($"Posicion {i} : {nombres[i]}");
+//            }
+//        }
+//    }
+//}
+
+//Arreglos 17
+//namespace Arraycon10numeros
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            int[] arr = new int[10];
+//           Console.WriteLine($"Introduce {arr.Length} numeros positivos");
+//            int num = 0;
+
+
+
+
+//            for (int i = 0; i <arr.Length   ; i++)
+//            {
+//                    do
+//                    {
+
+
+//                        Console.WriteLine($"Introduce un numero en la posicion {i + 1}");
+//                        num = int.Parse(Console.ReadLine());
+
+//                    } while (num<=0);
+//                     arr[i] = num;
+//            }
+//            Console.WriteLine("Te muestro los numeros del array");
+//            for (int i = 0; i < arr.Length; i++)
+//            {
+//                Console.WriteLine($"Los numeros de los arreglos se mostraran de uno en uno: {arr[i]}");
+//            }
+
+
+
+
+
+//        }
+//    }
+//}
+
+//Arreglos 18
+//namespace Arraycon10numeros
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            int[] arr = new int[5];
+//            int var = 0;
+//            int suma = 0;
+
+//            Console.WriteLine("Introduce 5 numeros entre 1 y 10");
+//            int k = 0;
+//            while (k < 5) 
+//            {
+//                do {
+//                    Console.WriteLine("Introduce un numero: ");
+//                var = int.Parse(Console.ReadLine());
+//                    if( var <1 || var>10)
+//                    {
+//                        Console.WriteLine("Numero fuera de rango, introduce otro numero");
+
+//                    }
+//                } while (var < 1 || var > 10);
+//                arr[k] = var;
+//                suma += arr[k];
+//                k++;
+//            }
+//            Console.WriteLine($"La suma es: {suma}");
+//            Console.WriteLine($"El promedio es es: {suma / arr.Length}");
+//            Console.ReadKey();  
+//        }
+//    }
+//}
+
+//Arreglos 19 numeros positivos
+//namespace Contador
+//{
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            int[] positivos = new int[5];
+//            int Contador=0;
+//            Console.WriteLine("Introduce 5 numeros enteros");
+//            for (int i = 0; i < positivos.Length; i++)
+//            {
+//                Console.WriteLine($"Introduce el numero {i + 1}");
+//                positivos[i] = int.Parse(Console.ReadLine());
+//                if (positivos[i]>0)
+//                {
+//                    Contador++;
+//                    Console.WriteLine($"En el arreglo tienes {Contador} numeros positivos");
+//                }
+//            }
+//        }
+//    }
+//}
+
+//Arreglos 20 Mostrar el mayor
+//namespace ArrayMayor
+//{
+//    class Program
+//    {
+//        static void Main(string[] args) 
+//        {
+//            int[] arr = new int[5];
+//            int mayor = arr[0];
+//            Console.WriteLine($"En la posicion 0 del arreglo, inicialmente hay un {mayor}");
+//            Console.WriteLine("Programa para obtener el numero mayor \n Introduce 5 numeros enteros");
+//            for (int i = 0; i < arr.Length; i++)
+//            {
+//                arr[i] = int.Parse(Console.ReadLine());
+//                if (arr[i] > mayor) mayor = arr[i];
+//                Console.WriteLine($"El numero mayor es {mayor}");
+//            }
+//        }
+//    }
+//}
+//21 Que son los metodos
+//namespace Metodos
+//{
+//    class Program
+//    {
+//        static void Main(string[] args) 
+//        {
+//            //Console.WriteLine(Math.Sqrt(25)); Raiz cuadrada Math.Sqrt(25)
+//            double raiz = Math.Sqrt(25);
+//            Console.WriteLine(raiz);
+//            Console.WriteLine($"La raiz de 25 es: {raiz}");
+
+//            double cincoxcinco = Math.Pow(5,2);
+//            Console.WriteLine($"La potencia de 5 a la 2 es{cincoxcinco} ");
+
+//        }
+//    }
+//namespace Metodos2
+//{
+
+
+//    class Program
+//    {
+//        void Mensaje()//Metodo para mandar a llamar
+//        {
+//            Console.WriteLine("Este es un mensaje de prueba!");
+//        }
+//        static void Main(string[] args )
+//        {
+//            Program elmensaje = new Program();
+//            Program elmensaje2 = new Program(); 
+//            elmensaje2.Mensaje2();
+//            elmensaje.Mensaje();
+
+//            Console.WriteLine(2+2);
+
+
+//        }
+//        void Mensaje2()
+//        {
+//            Console.WriteLine("Este es el segundo mensaje");
+//        }
+//    }
+
+
+//}
+//Metodossinretorno con parametros
+
+//namespace Metodos2
+//{
+//    class Program
+//    {
+//        void DuplicaNumero(int numero)
+//        {
+//            numero = numero * 2;
+//            Console.WriteLine(numero);
+//        }
+//        static void Main(string[] args)
+//        {
+//            Console.WriteLine("Hello World");
+
+
+//            Program duplicanumero = new Program();
+//            duplicanumero.DuplicaNumero(5);
+
+//        }
+//    }
+//}
+
+
+//Metodos sin parametros y sin retorno
+//namespace Metodos3
+//{
+//    class Cuadrado
+//    {
+//        int num = 0;
+
+//        void Inicializar()
+//        {
+//            Console.WriteLine("Ingresa el valor del numero: ");
+//            num = int.Parse(Console.ReadLine());
+//        }
+
+//        void ImprimirCuadrado()
+//        {
+//            int cuadrado = num * num;
+//            Console.WriteLine($"El cuadrado de {num} es: {cuadrado}");
+//        }
+//        static void Main(string[] args)
+//        {
+//            Cuadrado accion = new Cuadrado();
+//            accion.Inicializar();
+//            accion.ImprimirCuadrado();
+
+
+//        }
+//    }
+//}
+
+//Metodos con retorno y con parametros
+using System.Runtime.CompilerServices;
+
+//namespace MisMetodos
+//{
+//    class SumandoNumeros
+//    {
+//        int Suma(int num1, int num2)
+//        {
+//            return num1 + num2;
+//        }
+//        string DimeTuNombre (string nombre)
+//        {
+//            return nombre;
+//        }
+//        static void Main(string[] args)
+//        {
+//            SumandoNumeros operacion = new SumandoNumeros();
+            
+           
+//            //Console.WriteLine($"Mi nombre es: {operacion.DimeTuNombre("Eduardo")} y La suma total es de {operacion.Suma(5, 5)}");
+//            int valor1;
+//            int valor2;
+//            int valor3; 
+//            Console.WriteLine("Ingresa el primer Valor");
+//             valor1 = int.Parse(Console.ReadLine());
+//            Console.WriteLine("Ingresa el segundo Valor");
+//            valor2 = int.Parse(Console.ReadLine());
+//            Console.WriteLine("Ingresa el tercer Valor");
+//            valor3 = int.Parse(Console.ReadLine());
+//            Console.WriteLine("Ingresa tu nombre ");
+//            string nombre = Console.ReadLine();
+//            Console.WriteLine($"La operacion de 2 sumas es de {operacion.Suma(valor1,valor2)} y mi nombre es {operacion.DimeTuNombre(nombre)}");
+//            operacion.Suma(valor1, valor2,valor3);
+          
+//        }
+//        void Suma(int num1,int num2, int num3)
+//        {
+//            int resultado = num1 + num2 + num3;
+
+//            Console.WriteLine($"La suma de 3 es de: {resultado}");
+
+
+//        }
+//    }
+//}
+
+//Metodos estaticos con retornos y parametros
+//Se pueden llamar a metodos sin crear objetos
+
+//namespace Metodos2
+//{
+//    class Operaciones
+//    {
+//        static void Main(string[] args) 
+//        {
+//            int num1;
+//            int num2;
+//            do {
+                
+//                Console.WriteLine("Ingresa el primer numero para la suma de dos numeros");
+//                num1 = int.Parse(Console.ReadLine());
+//                Console.WriteLine("Ingresa el segundo numero para la suma de dos numeros");
+//                num2 = int.Parse(Console.ReadLine());
+
+//                if (num1 < 0 || num1 > 100 || num2 < 0 || num2 > 100)
+//                {
+//                    Console.WriteLine("Los valores 1 y 2 no estan en el rango de 0 a 100 \n vuelve a ingresar los valores");
+//                }
+
+//            } while(num1<0 || num1>100 ||  num2 < 0 || num2 >100);
+
+
+//            Console.WriteLine($"La suma es de : { Suma(num1, num2)}");
+//        }
+      
+
+//        static int Suma(int num1,int num2)
+//        {
+//            return num1 + num2;
+
+//        }
+
+//        static int Resta(int num1, int num2)
+//        {
+//            return num1 - num2;
+
+//        }
+//    }
+//}
+
+//Ambito de las variables en los metodos y en las clases
+
+namespace Ambito
 {
-    class Program
+    class Operaciones
     {
-        static void Main(string[] args)
+
+        double multi = 0, div = 0;
+        static void Main(string[] args) 
         {
-            Console.WriteLine("PROBANDO");
+
+            Operaciones operaciones = new Operaciones();
+            operaciones.Division(5, 1);
+
+
+
+        }
+
+        double Division(double num1, double num2)
+        {
+            double div = num1 / num2;   
+            return div;
+        }
+        double Multiplicacion(double num1, double num2)
+        {
+            multi = num1 * num2;    
+            return multi;
+        }
+        private void MuestraResultados()
+        {
+            Console.WriteLine($"El resultado de la division es: {div}");
+            Console.WriteLine($"El resultado de la multiplicacion es {multi}");
         }
     }
+
+    
+
 }

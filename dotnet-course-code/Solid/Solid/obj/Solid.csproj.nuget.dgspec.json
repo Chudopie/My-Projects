@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\source\\repos\\Solid\\Solid\\Solid.csproj": {}
+    "C:\\Users\\USER\\Documents\\GITHUB\\My-Projects\\dotnet-course-code\\Solid\\Solid\\Solid.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\source\\repos\\Solid\\Solid\\Solid.csproj": {
+    "C:\\Users\\USER\\Documents\\GITHUB\\My-Projects\\dotnet-course-code\\Solid\\Solid\\Solid.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\source\\repos\\Solid\\Solid\\Solid.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Documents\\GITHUB\\My-Projects\\dotnet-course-code\\Solid\\Solid\\Solid.csproj",
         "projectName": "Solid",
-        "projectPath": "C:\\Users\\USER\\source\\repos\\Solid\\Solid\\Solid.csproj",
+        "projectPath": "C:\\Users\\USER\\Documents\\GITHUB\\My-Projects\\dotnet-course-code\\Solid\\Solid\\Solid.csproj",
         "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\source\\repos\\Solid\\Solid\\obj\\",
+        "outputPath": "C:\\Users\\USER\\Documents\\GITHUB\\My-Projects\\dotnet-course-code\\Solid\\Solid\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
