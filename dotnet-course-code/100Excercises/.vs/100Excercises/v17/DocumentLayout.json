@@ -22,9 +22,15 @@
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Laptoprepo\\My-Projects\\dotnet-course-code\\100Excercises\\100Excercises\\Program.cs",
               "RelativeDocumentMoniker": "100Excercises\\Program.cs",
+<<<<<<< HEAD
               "ToolTip": "C:\\Laptoprepo\\My-Projects\\dotnet-course-code\\100Excercises\\100Excercises\\Program.cs*",
               "RelativeToolTip": "100Excercises\\Program.cs*",
               "ViewState": "AQIAACEBAAAAAAAAAAAAADYBAAABAAAA",
+=======
+              "ToolTip": "C:\\Users\\USER\\Documents\\GITHUB\\My-Projects\\dotnet-course-code\\100Excercises\\100Excercises\\Program.cs",
+              "RelativeToolTip": "100Excercises\\Program.cs",
+              "ViewState": "AQIAAH8CAAAAAAAAAAAUwIoCAAAoAAAA",
+>>>>>>> 245ebfa7da1e84bfced55835fd4e0c97ffe0ea98
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-21T23:05:53.439Z",
               "EditorCaption": ""

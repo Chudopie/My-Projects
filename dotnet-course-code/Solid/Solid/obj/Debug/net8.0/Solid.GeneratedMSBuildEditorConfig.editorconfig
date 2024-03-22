@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Solid
-build_property.ProjectDir = C:\Users\USER\source\repos\Solid\Solid\
+build_property.ProjectDir = C:\Users\USER\Documents\GITHUB\My-Projects\dotnet-course-code\Solid\Solid\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
