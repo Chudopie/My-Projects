@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\USER\\Documents\\GITHUB\\My-Projects\\dotnet-course-code\\100Excercises\\",
+  "WorkspaceRootPath": "C:\\Laptoprepo\\My-Projects\\dotnet-course-code\\100Excercises\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F12FE9D4-29A6-435B-9D15-08DF98C1444F}|100Excercises\\100Excercises.csproj|c:\\users\\user\\documents\\github\\my-projects\\dotnet-course-code\\100excercises\\100excercises\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F12FE9D4-29A6-435B-9D15-08DF98C1444F}|100Excercises\\100Excercises.csproj|c:\\laptoprepo\\my-projects\\dotnet-course-code\\100excercises\\100excercises\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F12FE9D4-29A6-435B-9D15-08DF98C1444F}|100Excercises\\100Excercises.csproj|solutionrelative:100excercises\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,21 +14,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Documents\\GITHUB\\My-Projects\\dotnet-course-code\\100Excercises\\100Excercises\\Program.cs",
+              "DocumentMoniker": "C:\\Laptoprepo\\My-Projects\\dotnet-course-code\\100Excercises\\100Excercises\\Program.cs",
               "RelativeDocumentMoniker": "100Excercises\\Program.cs",
-              "ToolTip": "C:\\Users\\USER\\Documents\\GITHUB\\My-Projects\\dotnet-course-code\\100Excercises\\100Excercises\\Program.cs",
-              "RelativeToolTip": "100Excercises\\Program.cs",
-              "ViewState": "AQIAABYBAAAAAAAAAADwvyUBAAAPAAAA",
+              "ToolTip": "C:\\Laptoprepo\\My-Projects\\dotnet-course-code\\100Excercises\\100Excercises\\Program.cs*",
+              "RelativeToolTip": "100Excercises\\Program.cs*",
+              "ViewState": "AQIAACEBAAAAAAAAAAAAADYBAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-21T23:05:53.439Z",
               "EditorCaption": ""
