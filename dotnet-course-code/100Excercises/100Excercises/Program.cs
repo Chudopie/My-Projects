@@ -653,20 +653,21 @@ namespace Ambito
 
             Operaciones operaciones = new Operaciones();
             operaciones.Division(5, 1);
-
+            operaciones.Multiplicacion(5, 1);
+            operaciones.MuestraResultados();
 
 
         }
 
-        double Division(double num1, double num2)
+        void Division(double num1, double num2)
         {
-            double div = num1 / num2;   
-            return div;
+             div = num1 / num2;   
+           
         }
-        double Multiplicacion(double num1, double num2)
+        void Multiplicacion(double num1, double num2)
         {
             multi = num1 * num2;    
-            return multi;
+            
         }
         private void MuestraResultados()
         {
