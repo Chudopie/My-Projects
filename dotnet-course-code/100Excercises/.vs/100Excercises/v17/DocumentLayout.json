@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\USER\\Documents\\GITHUB\\My-Projects\\dotnet-course-code\\100Excercises\\",
+  "WorkspaceRootPath": "C:\\Laptoprepo\\My-Projects\\dotnet-course-code\\100Excercises\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F12FE9D4-29A6-435B-9D15-08DF98C1444F}|100Excercises\\100Excercises.csproj|c:\\users\\user\\documents\\github\\my-projects\\dotnet-course-code\\100excercises\\100excercises\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F12FE9D4-29A6-435B-9D15-08DF98C1444F}|100Excercises\\100Excercises.csproj|c:\\laptoprepo\\my-projects\\dotnet-course-code\\100excercises\\100excercises\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F12FE9D4-29A6-435B-9D15-08DF98C1444F}|100Excercises\\100Excercises.csproj|solutionrelative:100excercises\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -20,11 +20,21 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Documents\\GITHUB\\My-Projects\\dotnet-course-code\\100Excercises\\100Excercises\\Program.cs",
+              "DocumentMoniker": "C:\\Laptoprepo\\My-Projects\\dotnet-course-code\\100Excercises\\100Excercises\\Program.cs",
               "RelativeDocumentMoniker": "100Excercises\\Program.cs",
+<<<<<<< HEAD
+              "ToolTip": "C:\\Laptoprepo\\My-Projects\\dotnet-course-code\\100Excercises\\100Excercises\\Program.cs*",
+              "RelativeToolTip": "100Excercises\\Program.cs*",
+              "ViewState": "AQIAACEBAAAAAAAAAAAAADYBAAABAAAA",
+=======
               "ToolTip": "C:\\Users\\USER\\Documents\\GITHUB\\My-Projects\\dotnet-course-code\\100Excercises\\100Excercises\\Program.cs",
               "RelativeToolTip": "100Excercises\\Program.cs",
+<<<<<<< HEAD
               "ViewState": "AQIAAIICAAAAAAAAAAAuwKgCAAABAAAA",
+=======
+              "ViewState": "AQIAAH8CAAAAAAAAAAAUwIoCAAAoAAAA",
+>>>>>>> 245ebfa7da1e84bfced55835fd4e0c97ffe0ea98
+>>>>>>> da815bdb059dde2b0a5b44a5408fa93b44708f85
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-21T23:05:53.439Z",
               "EditorCaption": ""
