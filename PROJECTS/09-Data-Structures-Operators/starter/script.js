@@ -42,8 +42,28 @@ const restaurant = {
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//SHORT CIRCUITING
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Use ANY data type, return ANY data type
+//short-circuiting 
+
+//En un OR si el primer valor es True, el resultado sera el primer valor//
+console.log(3 || 'Jonas'); //Resultado 3 
+console.log('' || 'Jonas');
+console.log(true || 0);
+console.log(undefined || null);
+
+console.log(undefined || 0 || '' || 'Hello' || 23 || null);
+
+// restaurant.numGuests=23
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10
+console.log(guests1);
+
+const guests2 = restaurant.numGuests || 10
+console.log(guests2);
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Rest Pattern and Parameters
 // 1) Destructuring
 //SPREAD, because on RIGHT side of  = 
