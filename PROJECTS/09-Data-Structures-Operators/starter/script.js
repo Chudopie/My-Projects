@@ -47,68 +47,112 @@ const restaurant = {
    }
 };
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Working with Strings Part 3
+//Split() and Join()
+console.log('a+very+nice+string'.split('+'));
+console.log('Eduardo Gonzalez'.split(" "));
+const [firstName, lastName] = 'Eduardo Gonzalez'.split(" ")
+const newName=['Mr.', firstName,lastName.toUpperCase()].join(' ')
+console.log(newName);
+
+
+
+const capitalizeName = function (name) {
+const names = name.split(' ') 
+const namesUpper = []
+for (const n of names) {
+    // namesUpper.push(n[0].toUpperCase()+n.slice(1))
+    namesUpper.push(n.replace(n[0],n[0].toUpperCase()))
+}
+console.log(namesUpper.join(' '));
+}
+capitalizeName('jessica ann smith davis')
+capitalizeName('eduardo gonzalez')
+
+
+//Padding
+const message = 'go to gate 23!'
+console.log(message.padStart(20,'+').padEnd(30,'+'));
+console.log('Jonas'.padStart(20,'+').padEnd(30,'+'));
+
+const maskCreditCard = function (number) {
+  const str = String(number)
+  // const str = number  + ' '//Same as above
+  const last = str.slice(-4)
+  return last.padStart(str.length,'*')
+}
+console.log(maskCreditCard('23948234'));
+console.log( maskCreditCard(389478293525))
+console.log( maskCreditCard('23984928342'))
+
+//Repeat
+const message2 ='Bad weather... All Departues Delayed'
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Working with Strings Part 2
-const airline = 'TAP Air Portugal'
-console.log(airline.toLowerCase(), '  This is on LowerCase'); //don't require arguments at all
-console.log(airline.toUpperCase(), '  This is on Upper Case')
-const passenger = 'jOnAS' // Jonas
-const passengerLower = passenger.toLowerCase()
-const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1)
-console.log(passengerCorrect);
-//Extra bonus practice
-const passengersName = function (name) 
-{
-    let wrongname = name.toLowerCase()
-    let correctName = wrongname[0].toUpperCase()+wrongname.slice(1)
-    console.log(correctName);
-}
-passengersName('EdUaRdO')
+// const airline = 'TAP Air Portugal'
+// console.log(airline.toLowerCase(), '  This is on LowerCase'); //don't require arguments at all
+// console.log(airline.toUpperCase(), '  This is on Upper Case')
+// const passenger = 'jOnAS' // Jonas
+// const passengerLower = passenger.toLowerCase()
+// const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1)
+// console.log(passengerCorrect);
+// //Extra bonus practice
+// const passengersName = function (name) 
+// {
+//     let wrongname = name.toLowerCase()
+//     let correctName = wrongname[0].toUpperCase()+wrongname.slice(1)
+//     console.log(correctName);
+// }
+// passengersName('EdUaRdO')
 
-// Comparing emails
-const email = 'hello@jonas.io';
-const loginEmail = '  Hello@Jonas.Io  \n'
+// // Comparing emails
+// const email = 'hello@jonas.io';
+// const loginEmail = '  Hello@Jonas.Io  \n'
 
-const lowerEmail = loginEmail.toLowerCase();
-const trimmedEmail = lowerEmail.trim()// trim quita los espacios
+// const lowerEmail = loginEmail.toLowerCase();
+// const trimmedEmail = lowerEmail.trim()// trim quita los espacios
 
-console.log(trimmedEmail);
-console.log(trimmedEmail === email);
-//replacing
-const priceGB= '288,97%'
-const priceUS = priceGB.replace('%','$').replace(',','.')
-console.log(priceUS);
-const announcement = 'All passengers come to barding door 23. Boarding door 23!'
-console.log(announcement.replace('door','gate'));
-console.log(announcement.replaceAll('door','gate'));
+// console.log(trimmedEmail);
+// console.log(trimmedEmail === email);
+// //replacing
+// const priceGB= '288,97%'
+// const priceUS = priceGB.replace('%','$').replace(',','.')
+// console.log(priceUS);
+// const announcement = 'All passengers come to barding door 23. Boarding door 23!'
+// console.log(announcement.replace('door','gate'));
+// console.log(announcement.replaceAll('door','gate'));
 
 
-console.log(announcement.replace(/door/g,'gate'));
-//g of global, the replace is case sensitive, all string methods are
+// console.log(announcement.replace(/door/g,'gate'));
+// //g of global, the replace is case sensitive, all string methods are
 
-//3 simple methods to Booleans
-//include,startwith, and endwith
+// //3 simple methods to Booleans
+// //include,startwith, and endwith
 
-const plane = 'Airbus A320neo'
-console.log(plane.includes('A320'));
-console.log(plane.includes('Boeing'));
-console.log(plane.startsWith('Airb'));
+// const plane = 'Airbus A320neo'
+// console.log(plane.includes('A320'));
+// console.log(plane.includes('Boeing'));
+// console.log(plane.startsWith('Airb'));
 
-if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
-  console.log('Part of the NEW Airbus Family');
-}
+// if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
+//   console.log('Part of the NEW Airbus Family');
+// }
 
-//Practice Excercise 
-const checkBaggage = function (items) {
-  const baggage = items.toLowerCase();
-  if (baggage.includes('knife') || baggage.includes('gun')) {
-    console.log('You are NOT allowed on board');
-  }else{
-    console.log('Welcome aboard!');
-  }
-}
-checkBaggage('I have a laptop, some Food and a pocket Knife')
-checkBaggage('Socks and a camera')
-checkBaggage('Got some snacks and a gun for protection')
+// //Practice Excercise 
+// const checkBaggage = function (items) {
+//   const baggage = items.toLowerCase();
+//   if (baggage.includes('knife') || baggage.includes('gun')) {
+//     console.log('You are NOT allowed on board');
+//   }else{
+//     console.log('Welcome aboard!');
+//   }
+// }
+// checkBaggage('I have a laptop, some Food and a pocket Knife')
+// checkBaggage('Socks and a camera')
+// checkBaggage('Got some snacks and a gun for protection')
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //Working with Strings Part 3
 
