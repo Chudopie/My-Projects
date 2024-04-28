@@ -542,24 +542,106 @@ const books = [
 //15.1
 // Take the ISBN property of the first book from the books array, and log to the console characters at index 6, 4, 9 and 8. Use bracket notation to access individual characters.
 
-console.log(`${books[0].ISBN['6']}, ${books[0].ISBN['4']}, ${books[0].ISBN['9']}, ${books[0].ISBN['8']}, `)
+// console.log(`${books[0].ISBN['6']}, ${books[0].ISBN['4']}, ${books[0].ISBN['9']}, ${books[0].ISBN['8']}, `)
 
 // 15.2
 // Below is the quote variable that stores a string. Find the index of the word 'chess', and log it to the console.
-const quote = 'A computer once beat me at chess, but it was no match for me at kick boxing';
-console.log(quote.indexOf('chess'));
+// const quote = 'A computer once beat me at chess, but it was no match for me at kick boxing';
+// console.log(quote.indexOf('chess'));
 // 15.3﻿
 // Extract the word "boxing" from the same quote string, and log it to the console.
-console.log(quote.slice(quote.lastIndexOf(' ')+1));
+// console.log(quote.slice(quote.lastIndexOf(' ')+1));
 
 // 15.4﻿
 // Some authors are noted as "(Contributor)", for example "Julie Sussman (Contributor)". Create a function called isContributor that takes an author's name as an argument, and returns either true (if he's a contributor) of false (if he's not a contributor). The string "(Contributor)" is always the last part of the author's name string.
-const isContributor = function(authorsName){
+// const isContributor = function(authorsName){
 
-  if(authorsName.lastIndexOf('(Contributor')){
-    console.log(true);
-  }console.log(false);
+//   if(authorsName.lastIndexOf('(Contributor')){
+//     console.log(true);
+//   }console.log(false);
+
+// }
+// isContributor('Julie Sussman (Contributor)')
+// isContributor('Robert Sedgewick')
+// 16.1﻿
+// Write a function called normalizeAuthorName that takes an author's name (string) as an argument, and returns the same string, but the first name and last name are capitalized, and the "(Contributor)" part is removed (if exists).
+
+// You can be sure that the author's name always consists of two words separated by a space, and possibly ends with "(Contributor)". The string may also contain trailing spaces.
+//   console.log(rightname);
+//   const withoutContributor = rightname.replace('(contributor)','')
+//   console.log(withoutContributor);
+
+//   let firstName = withoutContributor[0].toUpperCase()+withoutContributor.slice(1)
+ 
+//   console.log(firstName.startsWith(" "));
+
+  
+// console.log(firstName);
+const normalizeAuthorName = function (authorsName) {
+  let rightname = authorsName.toLowerCase()
+ let firstName = rightname.slice(0,rightname.indexOf(' '))
+ let correctFirstName=firstName[0].toUpperCase()+firstName.slice(1)
+//  console.log(correctFirstName);
+//second name
+
+let secondName = rightname.slice(authorsName.indexOf(' ')+1, authorsName.length)
+if (secondName.includes('(contributor)')) {
+     let withoutcontributor =secondName.slice([0],secondName.indexOf(' ')+1)
+    // console.log(withoutcontributor);
+    let correctSecondName=''
+    correctSecondName = withoutcontributor[0].toUpperCase()+withoutcontributor.slice(1)
+    // console.log(correctSecondName);
+
+    console.log(correctFirstName + " " +correctSecondName);
+}else{
+  let correctSecondName= rightname.slice(authorsName.indexOf(' ')+1,authorsName.length)
+  // console.log(correctSecondName);
+  correctSecondName = correctSecondName[0].toUpperCase()+correctSecondName.slice(1)
+  // console.log(correctSecondName);
+
+    console.log(correctFirstName + " " + correctSecondName);
+
+    // console.log(correctFirstName);
+}
+
+
+
+ 
+}
+
+normalizeAuthorName('JuliE sussMan (Contributor)')
+normalizeAuthorName('JuliE ClarK ')
+normalizeAuthorName('CarLos EduArDo')
+// Expected output:
+
+// "Julie Sussman".
+
+
+// 16.2﻿
+// Take the title of the second book (books[1]) from the books array, and replace the word "Programs" with "Software". Assign the new string to the newBookTitle variable.
+
+const newBookTitle = books[1].title.replace('Programs','Software')
+
+// 16.3﻿
+// Write a function called logBookTheme that takes book's title (string), and logs to the console:
+
+// "This book is about computers" if the title starts with the word "computer",
+
+// "This book is about algorithms and data structures" if the title includes both the "algorithms" and "structures" words,
+
+// and, "This book is about some systems, but definitely not about operating systems" if the title ends with the word "system" or "systems", but doesn't include the word "operating".
+
+const logBookTheme = function (title) {
+  
+  title = title.toLowerCase()
+
+if (title.startsWith('computer')) {
+  console.log(`"This book is about computers" `);
+}else if(title.includes('algorithms'&& title.includes('structures'))){
+  console.log( console.log(`"This book is about algorithms and data structures"`));
+}else if(title.endsWith('system'||title.endsWith('systems')) && !title.includes('operating'))
+{
+  console.log(`"This book is about some systems, but definitely not about operating systems" `);
+}
 
 }
-isContributor('Julie Sussman (Contributor)')
-isContributor('Robert Sedgewick')

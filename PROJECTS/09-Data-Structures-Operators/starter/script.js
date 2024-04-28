@@ -46,52 +46,114 @@ const restaurant = {
       console.log(otherIngredients);
    }
 };
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Working with Strings Part 2
+const airline = 'TAP Air Portugal'
+console.log(airline.toLowerCase(), '  This is on LowerCase'); //don't require arguments at all
+console.log(airline.toUpperCase(), '  This is on Upper Case')
+const passenger = 'jOnAS' // Jonas
+const passengerLower = passenger.toLowerCase()
+const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1)
+console.log(passengerCorrect);
+//Extra bonus practice
+const passengersName = function (name) 
+{
+    let wrongname = name.toLowerCase()
+    let correctName = wrongname[0].toUpperCase()+wrongname.slice(1)
+    console.log(correctName);
+}
+passengersName('EdUaRdO')
+
+// Comparing emails
+const email = 'hello@jonas.io';
+const loginEmail = '  Hello@Jonas.Io  \n'
+
+const lowerEmail = loginEmail.toLowerCase();
+const trimmedEmail = lowerEmail.trim()// trim quita los espacios
+
+console.log(trimmedEmail);
+console.log(trimmedEmail === email);
+//replacing
+const priceGB= '288,97%'
+const priceUS = priceGB.replace('%','$').replace(',','.')
+console.log(priceUS);
+const announcement = 'All passengers come to barding door 23. Boarding door 23!'
+console.log(announcement.replace('door','gate'));
+console.log(announcement.replaceAll('door','gate'));
 
 
+console.log(announcement.replace(/door/g,'gate'));
+//g of global, the replace is case sensitive, all string methods are
 
+//3 simple methods to Booleans
+//include,startwith, and endwith
+
+const plane = 'Airbus A320neo'
+console.log(plane.includes('A320'));
+console.log(plane.includes('Boeing'));
+console.log(plane.startsWith('Airb'));
+
+if (plane.startsWith('Airbus') && plane.endsWith('neo')) {
+  console.log('Part of the NEW Airbus Family');
+}
+
+//Practice Excercise 
+const checkBaggage = function (items) {
+  const baggage = items.toLowerCase();
+  if (baggage.includes('knife') || baggage.includes('gun')) {
+    console.log('You are NOT allowed on board');
+  }else{
+    console.log('Welcome aboard!');
+  }
+}
+checkBaggage('I have a laptop, some Food and a pocket Knife')
+checkBaggage('Socks and a camera')
+checkBaggage('Got some snacks and a gun for protection')
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Working with Strings Part 3
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//Working with Strings Part1
-const airline = 'TAP Air Portugal'
-const plane = 'A320'
-console.log(plane[0]);
-console.log(plane[1]);
-console.log(plane[2]);
-console.log('B737',[0]);
+// //Working with Strings Part1
+// const airline = 'TAP Air Portugal'
+// const plane = 'A320'
+// console.log(plane[0]);
+// console.log(plane[1]);
+// console.log(plane[2]);
+// console.log('B737',[0]);
 
-console.log(airline.length);
-console.log('B737'.length);
+// console.log(airline.length);
+// console.log('B737'.length);
 
-console.log(airline.indexOf('r'));
-console.log(airline.lastIndexOf('r'));
-console.log(airline.indexOf('portugal'));
+// console.log(airline.indexOf('r'));
+// console.log(airline.lastIndexOf('r'));
+// console.log(airline.indexOf('portugal'));
 
-console.log(airline.slice(4));
-console.log(airline.slice(4,7));
+// console.log(airline.slice(4));
+// console.log(airline.slice(4,7));
 
-console.log(airline.slice(0,airline.indexOf(' ')));
-console.log(airline.slice(airline.lastIndexOf(' ')+1));
-//agarra desde el final con negativos, o parte desde el final y hace una nueva variable como todos los demas slices o indexo lastindexof
-console.log(airline.slice(-2));
-console.log(airline.slice(1,-1));
+// console.log(airline.slice(0,airline.indexOf(' ')));
+// console.log(airline.slice(airline.lastIndexOf(' ')+1));
+// //agarra desde el final con negativos, o parte desde el final y hace una nueva variable como todos los demas slices o indexo lastindexof
+// console.log(airline.slice(-2));
+// console.log(airline.slice(1,-1));
 
-const checkMiddleSeat = function(seat){
-  //B and E are middle seats
-  const s = seat.slice(-1)
-  if (s==='B' || s==='E') {
-    console.log('You got the middle seat 🙄');
-  }else{
-    console.log('You Got Lucky😎');
-  }
-}
-checkMiddleSeat('11B')
-checkMiddleSeat('23C')
-checkMiddleSeat('3E')
+// const checkMiddleSeat = function(seat){
+//   //B and E are middle seats
+//   const s = seat.slice(-1)
+//   if (s==='B' || s==='E') {
+//     console.log('You got the middle seat 🙄');
+//   }else{
+//     console.log('You Got Lucky😎');
+//   }
+// }
+// checkMiddleSeat('11B')
+// checkMiddleSeat('23C')
+// checkMiddleSeat('3E')
 
-console.log(new String('jonas'));
-console.log(typeof new String('jonas'));
-console.log(typeof new String('jonas').slice(1));
+// console.log(new String('jonas'));
+// console.log(typeof new String('jonas'));
+// console.log(typeof new String('jonas').slice(1));
 
 
 
