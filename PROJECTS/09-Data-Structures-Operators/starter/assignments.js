@@ -577,71 +577,147 @@ const books = [
 
   
 // console.log(firstName);
-const normalizeAuthorName = function (authorsName) {
-  let rightname = authorsName.toLowerCase()
- let firstName = rightname.slice(0,rightname.indexOf(' '))
- let correctFirstName=firstName[0].toUpperCase()+firstName.slice(1)
-//  console.log(correctFirstName);
-//second name
+// const normalizeAuthorName = function (authorsName) {
+//   let rightname = authorsName.toLowerCase()
+//  let firstName = rightname.slice(0,rightname.indexOf(' '))
+//  let correctFirstName=firstName[0].toUpperCase()+firstName.slice(1)
+// //  console.log(correctFirstName);
+// //second name
 
-let secondName = rightname.slice(authorsName.indexOf(' ')+1, authorsName.length)
-if (secondName.includes('(contributor)')) {
-     let withoutcontributor =secondName.slice([0],secondName.indexOf(' ')+1)
-    // console.log(withoutcontributor);
-    let correctSecondName=''
-    correctSecondName = withoutcontributor[0].toUpperCase()+withoutcontributor.slice(1)
-    // console.log(correctSecondName);
+// let secondName = rightname.slice(authorsName.indexOf(' ')+1, authorsName.length)
+// if (secondName.includes('(contributor)')) {
+//      let withoutcontributor =secondName.slice([0],secondName.indexOf(' ')+1)
+//     // console.log(withoutcontributor);
+//     let correctSecondName=''
+//     correctSecondName = withoutcontributor[0].toUpperCase()+withoutcontributor.slice(1)
+//     // console.log(correctSecondName);
 
-    console.log(correctFirstName + " " +correctSecondName);
-}else{
-  let correctSecondName= rightname.slice(authorsName.indexOf(' ')+1,authorsName.length)
-  // console.log(correctSecondName);
-  correctSecondName = correctSecondName[0].toUpperCase()+correctSecondName.slice(1)
-  // console.log(correctSecondName);
+//     console.log(correctFirstName + " " +correctSecondName);
+// }else{
+//   let correctSecondName= rightname.slice(authorsName.indexOf(' ')+1,authorsName.length)
+//   // console.log(correctSecondName);
+//   correctSecondName = correctSecondName[0].toUpperCase()+correctSecondName.slice(1)
+//   // console.log(correctSecondName);
 
-    console.log(correctFirstName + " " + correctSecondName);
+//     console.log(correctFirstName + " " + correctSecondName);
 
-    // console.log(correctFirstName);
-}
+//     // console.log(correctFirstName);
+// }
 
 
 
  
-}
+// }
 
-normalizeAuthorName('JuliE sussMan (Contributor)')
-normalizeAuthorName('JuliE ClarK ')
-normalizeAuthorName('CarLos EduArDo')
-// Expected output:
+// normalizeAuthorName('JuliE sussMan (Contributor)')
+// normalizeAuthorName('JuliE ClarK ')
+// normalizeAuthorName('CarLos EduArDo')
+// // Expected output:
 
-// "Julie Sussman".
+// // "Julie Sussman".
 
 
-// 16.2﻿
-// Take the title of the second book (books[1]) from the books array, and replace the word "Programs" with "Software". Assign the new string to the newBookTitle variable.
+// // 16.2﻿
+// // Take the title of the second book (books[1]) from the books array, and replace the word "Programs" with "Software". Assign the new string to the newBookTitle variable.
 
-const newBookTitle = books[1].title.replace('Programs','Software')
+// const newBookTitle = books[1].title.replace('Programs','Software')
 
-// 16.3﻿
-// Write a function called logBookTheme that takes book's title (string), and logs to the console:
+// // 16.3﻿
+// // Write a function called logBookTheme that takes book's title (string), and logs to the console:
 
-// "This book is about computers" if the title starts with the word "computer",
+// // "This book is about computers" if the title starts with the word "computer",
 
-// "This book is about algorithms and data structures" if the title includes both the "algorithms" and "structures" words,
+// // "This book is about algorithms and data structures" if the title includes both the "algorithms" and "structures" words,
 
-// and, "This book is about some systems, but definitely not about operating systems" if the title ends with the word "system" or "systems", but doesn't include the word "operating".
+// // and, "This book is about some systems, but definitely not about operating systems" if the title ends with the word "system" or "systems", but doesn't include the word "operating".
 
-const logBookTheme = function (title) {
+// const logBookTheme = function (title) {
   
-  title = title.toLowerCase()
+//   title = title.toLowerCase()
 
-if (title.startsWith('computer')) {
-  console.log(`"This book is about computers" `);
-}else if(title.includes('algorithms'&& title.includes('structures'))){
-  console.log( console.log(`"This book is about algorithms and data structures"`));
-}else if(title.endsWith('system'||title.endsWith('systems')) && !title.includes('operating'))
-{
-  console.log(`"This book is about some systems, but definitely not about operating systems" `);
+// if (title.startsWith('computer')) {
+//   console.log(`"This book is about computers" `);
+// }else if(title.includes('algorithms'&& title.includes('structures'))){
+//   console.log( console.log(`"This book is about algorithms and data structures"`));
+// }else if(title.endsWith('system'||title.endsWith('systems')) && !title.includes('operating'))
+// {
+//   console.log(`"This book is about some systems, but definitely not about operating systems" `);
+// }
+
+// }
+
+// Working with Strings - Part 3﻿
+// 17.1﻿
+// Below is the bookCategories variable that stores a string of categories. Each category is separated with a semicolon, for example, in a string "science;computing", 'science' and 'computing' are separate categories.
+
+// Write a function called logBookCategories that takes a string of categories separated with semicolons, and logs each category to the console (as separate strings).
+
+// Code:
+
+const bookCategories = 'science;computing;computer science;algorithms;business;operating systems;networking;electronics';
+
+//Expected output
+// science
+// computing
+// computer science
+// algorithms
+// business
+// operating systems
+// networking
+// electronics
+
+const logBookCategories = function (string) {
+const s = string.split(';')
+  for (let s2  of s) {
+    console.log(s2);
+  }
+}
+// logBookCategories(bookCategories)
+
+// 17.2﻿
+// Now, the opposite. Each book from the books array has the keywords property.
+
+// Write a function called getKeywordsAsString that takes the books array as an argument, collects keywords from each book, removes duplicates, and then joins them to create a single string where keywords are separated by a semicolon.
+
+const getKeywordsAsString  = function (bookKeyword) {
+  const keywords = []
+  for (const book of bookKeyword) {
+    keywords.push(...book.keywords)
+  }
+
+  const uniqueKeywords= [...new Set(keywords)]
+  return console.log( uniqueKeywords.join(';'))
+}
+//Expected output
+// computer science;programming;algorithms;data structures;java;math;software;engineering;javascript;computer systems;C;operating systems;Java;mathematics;business;compilers;interpreters;work;focus;personal development
+getKeywordsAsString(books);
+// const l = books.length
+// console.log(l);
+
+// 17.3﻿
+// Below is the bookChapters array that contains inner arrays. Each inner array consists of a chapter's title, and the number of a page, for example, in ['The Basics', 14], 'The Basics' is the chapter's title, and 14 is the number of a page.
+
+// Write a function called logBookChapters that takes an array of arrays (like bookChapters) as an argument, and logs each chapter's name to the console together with the page number. The page number should be separated from the chapter's name with underscores (take a look at the example below).
+
+// Use the padEnd method.
+
+const bookChapters = [['The Basics', 14], ['Sorting', 254], ['Searching', 372], ['Graphs', 526], ['Strings', 706]];
+
+
+//expected output
+// The Basics__________ 14
+// Sorting_____________ 254
+// Searching___________ 372
+// Graphs______________ 526
+// Strings_____________ 706
+
+const logBookChapters = function (chapters) {
+
+  for (const [chapter,pages] of chapters) {
+    console.log(chapter.padEnd(20,'_' + ' ' + pages));
+  }
+  
 }
 
-}
+
+logBookChapters(bookChapters);
