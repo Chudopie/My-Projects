@@ -316,6 +316,7 @@ GOOD LUCK 😀
 // const secureBooking = function() {
 //   let passengerCount = 0;
 
+<<<<<<< HEAD
 //   return function(){
 //     passengerCount++
 //     console.log(`${passengerCount} passengers`);
@@ -338,8 +339,14 @@ const g = function() {
   const a  =23;
   f = function(){
     console.log(a*2);
+=======
+  return function(  ){
+    passengerCount++
+    console.log(`${passengerCount} passengers`);
+>>>>>>> bede7808e9c2bbced537235c5d108f60f2b8776c
   }
 }
+<<<<<<< HEAD
 
 const h = function(){
   const b = 777;
@@ -354,3 +361,9 @@ f();
 //  Re-assigning f funcion
 h();
 f();
+=======
+const booker = secureBooking()
+booker()
+booker()
+booker()
+>>>>>>> bede7808e9c2bbced537235c5d108f60f2b8776c
