@@ -313,13 +313,44 @@ GOOD LUCK 😀
 //////////////////////////////////////////////////////////////////////////
 //Closures
 
-const secureBooking = function() {
-  let passengerCount = 0;
+// const secureBooking = function() {
+//   let passengerCount = 0;
 
-  return function(){
-    passengerCount++
-    console.log(`${passengerCount} passengers`);
+//   return function(){
+//     passengerCount++
+//     console.log(`${passengerCount} passengers`);
+//   }
+
+// }
+// const booker = secureBooking();
+
+// booker();
+// booker();
+// booker();
+// console.dir(booker);
+
+
+//More Closure Examples
+
+let f;
+
+const g = function() {
+  const a  =23;
+  f = function(){
+    console.log(a*2);
   }
-
 }
-const booker = secureBooking()
+
+const h = function(){
+  const b = 777;
+  f =function(){
+    console.log(b*2);
+  }
+}
+
+g();
+f();
+
+//  Re-assigning f funcion
+h();
+f();
