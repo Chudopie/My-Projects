@@ -74,3 +74,39 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+let arr = ['a','b','c','d','e']
+
+console.log( arr.slice(2));
+console.log(arr.slice(2,4));
+console.log(arr.slice(-2));
+console.log(arr.slice(1,-1));
+//Those are the sames
+console.log(arr.slice());
+console.log([...arr]);
+
+//SPLICE
+// console.log(arr.splice(2));
+//it changes, the splice, just deleted the elements they select, and saves the others in the main array
+
+arr.splice(-1);
+console.log(arr);
+arr.splice(1,2);
+console.log(arr);
+
+arr = ['a','b','c','d','e']
+
+const arr2 = ['j','i','h','g','f']
+console.log(arr2);
+console.log(arr2.reverse()); //this mutate the original array //expected output :  ['f', 'g', 'h', 'i', 'j']
+console.log(arr2);
+
+//CONCAT
+
+const letters = arr.concat(arr2);//doesnt mutate the original array
+console.log(letters);
+console.log([...arr, ...arr2]);//exact result, and this not mutate
+
+
+//JOIN
+
+console.log(letters.join('-')); //expected output a-b-c-d-e-f-g-h-i-j
