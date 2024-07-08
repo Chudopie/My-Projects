@@ -126,15 +126,26 @@ const currencies = new Map([
 
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-for (const movement of movements){
+// for (const movement of movements){
+for(const[i,movement] of movements.entries()){
   if(movement>0)
     {
-      console.log(`You deposited ${movement}`);
+      console.log(`Movement ${i+1}: You deposited ${movement}`);
     }else{
-      console.log(`You withdraw ${Math.abs(movement)}`); //Math.abs to remove the sign
+      console.log(`Movement ${i+1}: You withdraw ${Math.abs(movement)}`); //Math.abs to remove the sign
     }
-}
+  }
+console.log(`-------------FOREACH----------------`);
 
-movements.forEach(function () {
-  
+movements.forEach(function (mov,i,arr) {
+  if(mov>0)
+    {
+      console.log(`Movement ${i+1}: You deposited ${mov}`);
+    }else{
+      console.log(`Movement ${i+1}: You withdraw ${Math.abs(mov)}`); //Math.abs to remove the sign
+    }
 })
+// 0: function(200)
+// 1: function(450)
+// 2: function(400)
+//...
